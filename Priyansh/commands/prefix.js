@@ -25,9 +25,9 @@ module.exports.handleEvent = async ({ event, api, Threads }) => {
     if (body === i.toUpperCase() | body === i | str === body) {
 const prefix = threadSetting.PREFIX || global.config.PREFIX;
       if (data.PREFIX == null) {
-        return out(`𝐓𝐇𝐈𝐒 𝐈𝐒 𝐌𝐘 𝐏𝐑𝐄𝐅𝐈𝐗 ⇉ [ ${prefix} ]\n● ──────────────────── ●𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 ARYAN THAKUR 𝐁𝐨𝐭\n\n● ──────────────────── ●\n\n=𝐎𝐰𝐧𝐞𝐫 ➻   ARYAN THAKUR\n\n𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝 𝐥𝐢𝐧𝐤 😊👈 ARYAN THAKUR :- ☞ https://www.facebook.com/profile.php?id=61579954495837\n\n● ──────────────────── ●`)
+        return out(`𝐓𝐇𝐈𝐒 𝐈𝐒 𝐌𝐘 𝐏𝐑𝐄𝐅𝐈𝐗 ⇉ [ ${prefix} ]\n● ──────────────────── ●𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 𝐑𝐀𝐉 𝐗𝐖𝐃__>3⚠️ 𝐁𝐨𝐭\n\n● ──────────────────── ●\n\n=𝐎𝐰𝐧𝐞𝐫 ➻   𝐑𝐀𝐉 𝐗𝐖𝐃 𝐇𝐄𝐑𝐄__>📵\n\n𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝 𝐥𝐢𝐧𝐤 🚫🧸 ARYAN THAKUR :- ☞ https://www.facebook.com/profile.php?id=61574885940483\n\n● ──────────────────── ●`)
       }
-      else return out('️️️️️️️️️️️️️️️️️️️️️️️️️️️𝐓𝐇𝐈𝐒 𝐈𝐒 𝐌𝐘 𝐏𝐑𝐄𝐅𝐈𝐗 ⇉ [ ${prefix} ]  \n\n𝐖𝐞𝐥𝐜𝐨𝐦𝐞 \n\n=𝐎𝐰𝐧𝐞𝐫 ➻    ARYAN THAKUR\n\n● ──────────────────── ●\n\n𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝 𝐥𝐢𝐧𝐤 😊 https://www.facebook.com/profile.php?id=61579954495837 \n\n● ──────────────────── ●' + data.PREFIX)
+      else return out('️️️️️️️️️️️️️️️️️️️️️️️️️️️𝐓𝐇𝐈𝐒 𝐈𝐒 𝐌𝐘 𝐏𝐑𝐄𝐅𝐈𝐗 ⇉ [ ${prefix} ]  \n\n𝐖𝐞𝐥𝐜𝐨𝐦𝐞 \n\n=𝐎𝐰𝐧𝐞𝐫 ➻𝐑𝐀𝐉♻️\n\n● ──────────────────── ●\n\n𝐅𝐚𝐜𝐞𝐛𝐨𝐨𝐤 𝐢𝐝 𝐥𝐢𝐧𝐤 😊 https://www.facebook.com/profile.php?id=61574885940483 \n\n● ──────────────────── ●' + data.PREFIX)
     }
 
   });
