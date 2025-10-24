@@ -1,7 +1,7 @@
 {
   "name": "Priyansh",
   "version": "10.1.1",
-  "description": "A simple Facebook Messenger Bot made by 𝐎𝐰𝐧𝐞𝐫 ➻ 𝐀𝐚𝐝𝐢 𝐛𝐚𝐛𝐮.",
+  "description": "A simple Facebook Messenger Bot made by 𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭.",
   "main": "Priyansh.js",
   "engines": {
       "node": "20.x",
@@ -26,14 +26,14 @@
       "prince",
       "mental"
   ],
-  "author": "𝐀𝐚𝐝𝐢 𝐛𝐚𝐛𝐮",
+  "author": "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
   "license": "GPL-3.0",
   "bugs": {
       "url": "https://github.com/Priyansh-11/Priyansh-bot/issues"
   },
   "homepage": "https://github.com/Priyansh-11/Priyansh-bot/issues",
   "dependencies": {
-      "@distube/ytdl-core": "^4.13.2",
+      "@distube/ytdl-core": "^4.16.5",
       "@miraipr0ject/assets": "^1.0.9",
       "@replit/database": "^2.0.2",
       "@supercharge/strings": "^1.28.0",
@@ -53,14 +53,13 @@
       "crypto": "^1.0.1",
       "crypto-js": "^4.1.1",
       "discord-chatbot": "^2.1.0",
-      "discord-image-generation": "^1.4.13",
-      "discord.js": "^12.5.3",
       "eval": "^0.1.8",
       "express": "^4.19.2",
       "extract-zip": "^2.0.1",
       "fb-tools": "0.0.1-security",
-      "fca-priyansh": "^18.0.0",
+      "fca-smart-shankar": "^13.0.0",
       "figlet": "^1.5.2",
+      "fluent-ffmpeg":"^2.1.3",
       "form-data": "^4.0.0",
       "fs-extra": "^10.1.0",
       "googlethis": "^1.2.9",
@@ -93,7 +92,8 @@
       "path": "^0.12.7",
       "pidusage": "^3.0.0",
       "ping-monitor": "^0.6.2",
-      "priyansh-all-dl": "latest",
+      "priyansh-fb-downloader": "^2.0.0",
+      "priyansh-ig-downloader": "^2.0.2",
       "priyanshu-fca": "^1.0.0",
       "random-cat-img": "^1.0.4",
       "readline": "^1.3.0",
