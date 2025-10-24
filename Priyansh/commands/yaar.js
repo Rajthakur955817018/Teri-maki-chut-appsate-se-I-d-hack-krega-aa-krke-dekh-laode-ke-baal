@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "bot",
+  name: "Nastaa",
   version: "1.0.0",
   hasPermssion: 0,
   credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
@@ -21,6 +21,7 @@ const request = global.nodemodule["request"];
 const fs = global.nodemodule["fs-extra"];
   var link = [
   "https://i.imgur.com/Y08T0K4.jpeg",
+  "https://i.imgur.com/zAlbxem.jpeg",
   ];
   var max = Math.floor(Math.random() * 6);  
 var min = Math.floor(Math.random() * 2);
