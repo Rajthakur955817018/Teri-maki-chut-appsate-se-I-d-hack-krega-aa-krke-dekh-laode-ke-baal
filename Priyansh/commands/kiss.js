@@ -1,11 +1,11 @@
 module.exports.config = {
-    name: "chumma",
+    name: "Kiss",
     version: "2.0.0",
     hasPermssion: 0,
     credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
-    description: "chumma the person you want",
+    description: "Kiss the person you want",
     commandCategory: "Love",
-    usages: "chumma [tag]",
+    usages: "Kiss [tag]",
     cooldowns: 5,
     dependencies: {
         "axios": "",
