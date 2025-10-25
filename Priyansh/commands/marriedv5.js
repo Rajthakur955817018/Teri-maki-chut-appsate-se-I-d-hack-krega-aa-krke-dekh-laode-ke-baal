@@ -1,74 +1,58 @@
 module.exports.config = {
-    name: "marriedv5",
-    version: "3.1.1",
-    hasPermssion: 0,
-    credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
-    description: "married",
-    commandCategory: "img",
-    usages: "[@mention]",
-    cooldowns: 5,
-    dependencies: {
-        "axios": "",
-        "fs-extra": "",
-        "path": "",
-        "jimp": ""
-    }
+  name: "uptime",
+  version: "4.0.0",
+  hasPermssion: 0,
+  credits: "Rudra",
+  description: "Display swaggy owner and bot info with random stylish image",
+  commandCategory: "Uptime",
+  cooldowns: 1,
+  dependencies: {
+    "request": "",
+    "fs-extra": "",
+    "axios": ""
+  }
 };
 
-module.exports.onLoad = async() => {
-    const { resolve } = global.nodemodule["path"];
-    const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
-    const { downloadFile } = global.utils;
-    const dirMaterial = __dirname + `/cache/canvas/`;
-    const path = resolve(__dirname, 'cache/canvas', 'marriedv5.png');
-    if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://i.ibb.co/mhxtgwm/49be174dafdc259030f70b1c57fa1c13.jpg", path);
-}
+module.exports.run = async function ({ api, event }) {
+  const axios = global.nodemodule["axios"];
+  const request = global.nodemodule["request"];
+  const fs = global.nodemodule["fs-extra"];
+  const moment = require("moment-timezone");
 
-async function makeImage({ one, two }) {
-    const fs = global.nodemodule["fs-extra"];
-    const path = global.nodemodule["path"];
-    const axios = global.nodemodule["axios"]; 
-    const jimp = global.nodemodule["jimp"];
-    const __root = path.resolve(__dirname, "cache", "canvas");
+  const time = process.uptime();
+  const hours = Math.floor(time / 3600);
+  const minutes = Math.floor((time % 3600) / 60);
+  const seconds = Math.floor(time % 60);
+  const dateNow = moment.tz("Asia/Kolkata").format("『DD/MM/YYYY』 【HH:mm:ss】");
 
-    let batgiam_img = await jimp.read(__root + "/marriedv5.png");
-    let pathImg = __root + `/batman${one}_${two}.png`;
-    let avatarOne = __root + `/avt_${one}.png`;
-    let avatarTwo = __root + `/avt_${two}.png`;
-    
-    let getAvatarOne = (await axios.get(`https://graph.facebook.com/${one}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`, { responseType: 'arraybuffer' })).data;
-    fs.writeFileSync(avatarOne, Buffer.from(getAvatarOne, 'utf-8'));
-    
-    let getAvatarTwo = (await axios.get(`https://graph.facebook.com/${two}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`, { responseType: 'arraybuffer' })).data;
-    fs.writeFileSync(avatarTwo, Buffer.from(getAvatarTwo, 'utf-8'));
-    
-    let circleOne = await jimp.read(await circle(avatarOne));
-    let circleTwo = await jimp.read(await circle(avatarTwo));
-    batgiam_img.composite(circleOne.resize(130, 130), 300, 150).composite(circleTwo.resize(130, 130), 170, 230);
-    
-    let raw = await batgiam_img.getBufferAsync("image/png");
-    
-    fs.writeFileSync(pathImg, raw);
-    fs.unlinkSync(avatarOne);
-    fs.unlinkSync(avatarTwo);
-    
-    return pathImg;
-}
-async function circle(image) {
-    const jimp = require("jimp");
-    image = await jimp.read(image);
-    image.circle();
-    return await image.getBufferAsync("image/png");
-}
+  // Your personal Imgur + anime links
+  const imgLinks = [
+    "https://i.ibb.co/20z09FP6/1757678368313-0-5200708942107688.jpg",
+  ];
 
-module.exports.run = async function ({ event, api, args }) {    
-    const fs = global.nodemodule["fs-extra"];
-    const { threadID, messageID, senderID } = event;
-    const mention = Object.keys(event.mentions);
-    if (!mention[0]) return api.sendMessage("Please mention 1 person.", threadID, messageID);
-    else {
-        const one = senderID, two = mention[0];
-        return makeImage({ one, two }).then(path => api.sendMessage({ body: "", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
-    }
-}
+  const chosenImage = imgLinks[Math.floor(Math.random() * imgLinks.length)];
+
+  const msg = `✨ 𝙎𝙒𝘼𝙂 𝙈𝙊𝘿𝙀 𝙊𝙉 ✨\n━━━━━━━━━━━━━━━\n\n` +
+              `👑 𝗕𝗢𝗧: ${global.config.BOTNAME || "❌𝐑𝐀𝐉 𝐗𝐖𝐃⚠️"}\n` +
+              `🧠 𝗢𝗪𝗡𝗘𝗥:𝙍𝘼𝙅 𝙏𝙃𝘼𝙆𝙐𝙍 𝙓𝙒𝘿📵 (UID:61574885940483)\n` +
+              `📸 𝗜𝗡𝗦𝗧𝗔: @rajthakur8` +
+              `📍 𝗣𝗥𝗘𝗙𝗜𝗫: ${global.config.PREFIX || "#"}\n` +
+              `📆 𝗗𝗔𝗧𝗘: ${dateNow}\n` +
+              `⏳ 𝗨𝗣𝗧𝗜𝗠𝗘: ${hours}h ${minutes}m ${seconds}s\n\n` +
+              `💌 𝗧𝗬𝗣𝗘 '${global.config.PREFIX || "#"}help' 𝗙𝗢𝗥 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦 💌\n` +
+              `━━━━━━━━━━━━━━━\n💖 𝑴𝒂𝒅𝒆 𝒘𝒊𝒕𝒉 𝑺𝒘𝒂𝒈 𝒃𝒚 RAJ THAKUR XWD`;
+
+  const callback = () =>
+    api.sendMessage(
+      {
+        body: msg,
+        attachment: fs.createReadStream(__dirname + "/cache/rudra_info.jpg")
+      },
+      event.threadID,
+      () => fs.unlinkSync(__dirname + "/cache/rudra_info.jpg")
+    );
+
+  request(encodeURI(chosenImage))
+    .pipe(fs.createWriteStream(__dirname + "/cache/rudra_info.jpg"))
+    .on("close", () => callback());
+};
