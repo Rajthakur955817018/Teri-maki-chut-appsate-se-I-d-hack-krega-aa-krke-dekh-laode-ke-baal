@@ -1,11 +1,11 @@
 module.exports.config = {
-    name: "Kiss",
+    name: "kiss",
     version: "2.0.0",
     hasPermssion: 0,
     credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
     description: "Kiss the person you want",
     commandCategory: "Love",
-    usages: "Kiss [tag]",
+    usages: "kiss [tag]",
     cooldowns: 5,
     dependencies: {
         "axios": "",
@@ -22,7 +22,7 @@ module.exports.onLoad = async() => {
     const dirMaterial = __dirname + `/cache/`;
     const path = resolve(__dirname, 'cache', 'hon0.jpeg');
     if (!existsSync(dirMaterial + "")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://i.imgur.com/xbsz4Hd.jpeg", path);
+    if (!existsSync(path)) await downloadFile("https://i.imgur.com/j96ooUs.jpeg", path);
 
 }
 
@@ -74,6 +74,6 @@ module.exports.run = async function ({ event, api, args, Currencies }) {
   
   if (!two) return api.sendMessage("Please tag 1 person", threadID, messageID);
   else {
-        return makeImage({ one, two }).then(path => api.sendMessage({ body: `[❤️] maza आया 😘 करके 😆 या झटका लगा 4 वोल्टेज का❌: ${hc} %\n[❤️] ले कर लिया कर तूने उस बिछड़े यार को 🥱: ${((hc)*rd)} $\n[❤️] Wish you happy 🍀`, attachment: fs.createReadStream(path)}, threadID, () => fs.unlinkSync(path), messageID));
+        return makeImage({ one, two }).then(path => api.sendMessage({ body: `[❤️] The level of affection between you and that person is: ${hc} %\n[❤️] The two of you are blessed by BOT: ${((hc)*rd)} $\n[❤️] Wish you happy 🍀`, attachment: fs.createReadStream(path)}, threadID, () => fs.unlinkSync(path), messageID));
   }
 }
