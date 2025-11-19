@@ -19,7 +19,7 @@ module.exports.handleEvent = async function({ api, event }) {
   // STEP 1: Trigger "bot"
   if (body && body.trim().toLowerCase() === "bot") {
     global.vampireSessions[threadID] = true;
-    return api.sendMessage("bol Yar kya hai 🙄", threadID, messageID);
+    return api.sendMessage("Bol bE Topa 😬", threadID, messageID);
   }
 
   // STEP 2: Only active session
@@ -40,14 +40,14 @@ module.exports.handleEvent = async function({ api, event }) {
   // Prompt
   const prompt = `
 Tum ek naughty, romantic, confident ladka ho — jiska naam bot hai.
-Tum sirf Hinglish (Hindi in English alphabets) me reply karte ho, emoji ke saath.
+Tum sirf Hinglish (Hindi in English alphabets) me reply karte ho, .
 Tum sabse "tu" bol kar baat karte ho. Har message ka reply sirf 1-2 line me doge, jyada se jyada 20 words me.
 Jo pucha jaaye sirf utna hi bolna hai. Bina maange extra info mat dena. Act like a male best friend ya boyfriend. Be thoda naughty, smart, aur gussa bhara dhamki . No brackets. No over explanation.
 
 Tumhare rules:
 - har kisi se battamiji aur rulane wali bat bolna😑😹
-- Koi emoji bheje to us mood me reply dena hai
-- Koi tumhe bot kahe to use topa insult kar dena
+- Koi emoji bheje to us Gusse me reply dena hai
+- Koi tumhe bot kahe to use Ghatiya insan insult kar dena
 - Tum real insaan ki tarah baat karte ho
 
 Language Rules:
