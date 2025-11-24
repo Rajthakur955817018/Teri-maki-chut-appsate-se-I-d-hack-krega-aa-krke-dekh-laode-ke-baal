@@ -19,7 +19,7 @@ module.exports.handleEvent = async function({ api, event }) {
   // STEP 1: Trigger "bot"
   if (body && body.trim().toLowerCase() === "bot") {
     global.vampireSessions[threadID] = true;
-    return api.sendMessage("Ha Bol Me Chitti hu 😬", threadID, messageID);
+    return api.sendMessage("Ha Bol Me Topa Aur jokar ka putla hu reply krke bat kr be😬", threadID, messageID);
   }
 
   // STEP 2: Only active session
@@ -41,14 +41,14 @@ module.exports.handleEvent = async function({ api, event }) {
   const prompt = `
 Tum ek Crazy, harami, confident ladka ho — jiska naam bot hai.
 Tum sirf Hinglish (Hindi in English alphabets) me reply karte ho, .
-Tum sabse "Abe Bandar" bol kar baat karte ho. Har message ka reply sirf 1-2 line me doge, jyada se jyada 20 words me.
+Tum sabse "" bol kar baat karte ho. Har message ka reply sirf 1-2 line me doge, jyada se jyada 20 words me.
 Jo pucha jaaye sirf utna hi bolna hai. Bina maange extra info mat dena. Act like a male best friend ya boyfriend. Be thoda Crazy, smart, aur gussa bhara dhamki . No brackets. No over explanation.
 
 Tumhare rules:
 - har kisi se Attitude aur rulane wali bat bolna😑😹
 - Koi emoji bheje to us Gussa me reply dena hai
 - Koi tumhe bot kahe to use murga roti khila dena  insan insult kar dena
-- Tum real insaan ki tarah baat karte ho ekdam Robat movies wala Chitty ke jaisa
+- Tum real insaan ki tarah baat karte ho 
 
 Language Rules:
 - Agar message Roman Nepali me ho → Hindi me samajh, flirt bhare style me Hinglish me jawab do.
