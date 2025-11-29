@@ -23,11 +23,8 @@ const gifs = [
 ];
 
 const messages = [
-                "=𝐎𝐰𝐧𝐞𝐫 ➻  💐𝐒𝐀𝐌𝐄𝐄𝐑💐 \n──────────────────\n\n🙋  🄱🅈🄴 🄱🅈🄴 🄱🄰🄱🅄 🄼🄸🅂🅂 🅈🄾🅄 🄱🄷🅄🅃 🅂🄰🅁🄰  🙋\n",
-                "=𝐎𝐰𝐧𝐞𝐫 ➻   𝐒𝐀𝐦𝐞𝐞𝐫 𝐊𝐡𝐀𝐚𝐧 \n──────────────────\n\n🙋  🄱🅈🄴 🄱🅈🄴 🄱🄰🄱🅄 🄼🄸🅂🅂 🅈🄾🅄 🄱🄷🅄🅃 🅂🄰🅁🄰  🙋\n",
-                "𝐎𝐰𝐧𝐞𝐫 ➻    𝐒𝐀𝐦𝐞𝐞𝐫 𝐊𝐡𝐀𝐚𝐧 \n──────────────────\n\n🙋  🄱🅈🄴 🄱🅈🄴 🄱🄰🄱🅄 🄼🄸🅂🅂 🅈🄾🅄 🄱🄷🅄🅃 🅂🄰🅁🄰  🙋\n",
-                "=𝐎𝐰𝐧𝐞𝐫 ➻  𝐒𝐀𝐦𝐞𝐞𝐫 𝐊𝐡𝐀𝐚𝐧 \n──────────────────\n\n🙋  🄱🅈🄴 🄱🅈🄴 🄱🄰🄱🅄 🄼🄸🅂🅂 🅈🄾🅄 🄱🄷🅄🅃 🅂🄰🅁🄰  🙋\n",
-                "=𝐎𝐰𝐧𝐞𝐫 ➻  𝐒𝐀𝐦𝐞𝐞𝐫 𝐊𝐡𝐀𝐚𝐧 \n──────────────────\n\n🙋  🄱🅈🄴 🄱🅈🄴 🄱🄰🄱🅄 🄼🄸🅂🅂 🅈🄾🅄 🄱🄷🅄🅃 🅂🄰🅁🄰  🙋\n"
+                "=   𝐁𝐘😡🙄\n──────────────────\n\n 🥱 kaha ja rhe daffar u ki gf ne bulaya hai kya u ko 😳\n",
+            
 ];
 
 module.exports.handleEvent = async function({ api, event, client, Users, __GLOBAL }) {
@@ -37,8 +34,8 @@ module.exports.handleEvent = async function({ api, event, client, Users, __GLOBA
                 if (event.body.toLowerCase().startsWith("BYE") || 
                                 event.body.toLowerCase().startsWith("bye") || 
                                 event.body.toLowerCase().startsWith("Bye") || 
-                                event.body.toLowerCase().startsWith("allah Hafiz") || 
-                                event.body.toLowerCase().startsWith("Allah Hafiz")) { 
+                                event.body.toLowerCase().startsWith("JAI MATA DI") || 
+                                event.body.toLowerCase().startsWith("JAY MATA DI")) { 
 
                                 // Select random GIF and message
                                 const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
@@ -52,7 +49,7 @@ module.exports.handleEvent = async function({ api, event, client, Users, __GLOBA
                                                                 attachment: fs.createReadStream(downloadPath)
                                                 };
                                                 api.sendMessage(msg, threadID, messageID);
-                                                api.setMessageReaction("🤞", event.messageID, (err) => {}, true);
+                                                api.setMessageReaction("🤣", event.messageID, (err) => {}, true);
                                 });
                 }
 }
