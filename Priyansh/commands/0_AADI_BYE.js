@@ -32,8 +32,8 @@ module.exports.handleEvent = async function({ api, event, client, Users, __GLOBA
                 var name = await Users.getNameUser(event.senderID);
 
                 if (event.body.toLowerCase().startsWith("BYE") || 
-                                event.body.toLowerCase().startsWith("bye") || 
-                                event.body.toLowerCase().startsWith("Bye") || 
+                                event.body.toLowerCase().startsWith("by") || 
+                                event.body.toLowerCase().startsWith("By") || 
                                 event.body.toLowerCase().startsWith("JAI MATA DI") || 
                                 event.body.toLowerCase().startsWith("JAY MATA DI")) { 
 
